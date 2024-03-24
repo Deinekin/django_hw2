@@ -1,12 +1,12 @@
 [
 {
     "model": "catalog.product",
-    "pk": 17,
+    "pk": 24,
     "fields": {
         "name": "Говядина",
         "description": "хорошая говядина",
         "image_preview": "",
-        "category": 31,
+        "category": 37,
         "price_per_product": 750.0,
         "created_at": "2024-03-24",
         "updated_at": "2024-03-24"
@@ -14,12 +14,12 @@
 },
 {
     "model": "catalog.product",
-    "pk": 18,
+    "pk": 25,
     "fields": {
         "name": "Свинина",
         "description": "хорошая свинина",
         "image_preview": "",
-        "category": 31,
+        "category": 37,
         "price_per_product": 600.0,
         "created_at": "2024-03-24",
         "updated_at": "2024-03-24"
@@ -27,12 +27,12 @@
 },
 {
     "model": "catalog.product",
-    "pk": 19,
+    "pk": 26,
     "fields": {
         "name": "Баранина",
         "description": "хорошая баранина",
         "image_preview": "",
-        "category": 31,
+        "category": 37,
         "price_per_product": 1000.0,
         "created_at": "2024-03-24",
         "updated_at": "2024-03-24"
@@ -40,12 +40,12 @@
 },
 {
     "model": "catalog.product",
-    "pk": 20,
+    "pk": 27,
     "fields": {
         "name": "Пиво",
         "description": "обычное пиво",
         "image_preview": "",
-        "category": 30,
+        "category": 36,
         "price_per_product": 50.0,
         "created_at": "2024-03-24",
         "updated_at": "2024-03-24"
@@ -53,12 +53,12 @@
 },
 {
     "model": "catalog.product",
-    "pk": 21,
+    "pk": 28,
     "fields": {
         "name": "Пиво",
         "description": "крутое пиво",
         "image_preview": "",
-        "category": 30,
+        "category": 36,
         "price_per_product": 150.0,
         "created_at": "2024-03-24",
         "updated_at": "2024-03-24"
@@ -66,12 +66,12 @@
 },
 {
     "model": "catalog.product",
-    "pk": 22,
+    "pk": 29,
     "fields": {
         "name": "Сыр",
         "description": "Массдам",
         "image_preview": "",
-        "category": 32,
+        "category": 38,
         "price_per_product": 1200.0,
         "created_at": "2024-03-24",
         "updated_at": "2024-03-24"
@@ -79,12 +79,12 @@
 },
 {
     "model": "catalog.product",
-    "pk": 23,
+    "pk": 30,
     "fields": {
         "name": "Сыр",
         "description": "Тильзетер",
         "image_preview": "",
-        "category": 32,
+        "category": 38,
         "price_per_product": 1000.0,
         "created_at": "2024-03-24",
         "updated_at": "2024-03-24"
