@@ -1,7 +1,7 @@
 [
 {
     "model": "catalog.category",
-    "pk": 24,
+    "pk": 30,
     "fields": {
         "name": "Алкоголь",
         "description": "Алкогольные напитки"
@@ -9,7 +9,7 @@
 },
 {
     "model": "catalog.category",
-    "pk": 25,
+    "pk": 31,
     "fields": {
         "name": "Мясо",
         "description": "Мясная продукция"
@@ -17,7 +17,7 @@
 },
 {
     "model": "catalog.category",
-    "pk": 26,
+    "pk": 32,
     "fields": {
         "name": "Молоко",
         "description": "Молочные изделия"
