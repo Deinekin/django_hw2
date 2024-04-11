@@ -10,10 +10,10 @@ def home(request):
     return render(request, "catalog/home.html", context)
 
 
-def product(request, pk):
-    products = Product.objects.get(pk=pk)
+def get_product(request, pk):
+    product = Product.objects.get(pk=pk)
     context = {
-        "object": products
+        "object": product
     }
     return render(request, "catalog/product.html", context)
 
