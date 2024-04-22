@@ -8,12 +8,21 @@
             <div class="card-header">
                 <h4 class="my-0 font-weight-normal">{{ object.name }}</h4>
             </div>
-            <img src="{{object.image_preview|my_media_filter}}" class="card-img-top p-2" alt="...">
+            <img src="{{ object.image_preview|my_media_filter }}" class="card-img-top p-2" alt="...">
             <div class="card-body">
                 <h5 class="card-title pricing-card-title">{{ object.description }}</h5>
                 <button type="button" class="btn btn-lg btn-block btn-outline-primary">{{ object.price_per_product }}
                     руб
                 </button>
+                <div class="card-footer">
+                    <small class="text-body-secondary">Версия:
+                        {% if object.version.exists %}
+                        {{ object.version_name }}
+                        {% else %}
+                        {{ object.version_name }}
+                        {% endif %}
+                    </small>
+                </div>
             </div>
         </div>
     </div>
