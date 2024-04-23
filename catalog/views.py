@@ -49,17 +49,17 @@ class ProductDetailView(DetailView):
     model = Product
     template_name = "catalog/product.html"
 
-    def get_context_data(self,*args, **kwargs):
+    def get_context_data(self, *args, **kwargs):
         context_data = super().get_context_data(*args, **kwargs)
-        products = Product.objects.all()
-        for product in products:
-            version = Version.objects.filter(product=product)
+        product = Product.objects.get(pk=self.kwargs.get("pk"))
 
-            active_versions = version.filter(current=True)
+        version = Version.objects.filter(product=product)
 
-            if active_versions:
-                self.object.version_name = active_versions.last().name
-        context_data['object_list'] = products
+        active_versions = version.filter(current=True)
+
+        if active_versions:
+            self.object.version_name = active_versions.last().name
+        context_data['object_list'] = product
         return context_data
 
 
