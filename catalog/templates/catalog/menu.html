@@ -4,6 +4,11 @@
         <li><a href="{% url 'catalog:home' %}" class="p-2 btn btn-outline-primary">Главная</a></li>
         <li><a href="{% url 'blog:list' %}" class="p-2 btn btn-outline-primary">Блог</a></li>
         <li><a href="{% url 'catalog:contacts' %}" class="p-2 btn btn-outline-primary">Контакты</a></li>
-
+        {% if user.is_authenticated %}
+            <li><a href="{% url 'users:logout' %}" class="p-2 btn btn-outline-primary">Выйти</a></li>
+        {% else %}
+            <li><a href="{% url 'users:login' %}" class="p-2 btn btn-outline-primary">Войти</a></li>
+            <li><a href="{% url 'users:register' %}" class="p-2 btn btn-outline-primary">Регистрация</a></li>
+        {% endif %}
     </ul>
 </div>

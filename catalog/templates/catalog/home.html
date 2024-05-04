@@ -2,9 +2,11 @@
 {% load my_tags %}
 {% block content %}
 <div class="container">
-    <div class="col-12 mb-5">
-        <a class="btn btn-outline-primary" href="{% url 'catalog:create_product' %}">Добавить продукт</a>
-    </div>
+    {% if user.is_authenticated %}
+        <div class="col-12 mb-5">
+            <a class="btn btn-outline-primary" href="{% url 'catalog:create_product' %}">Добавить продукт</a>
+        </div>
+    {% endif %}
     <div class="row text-center">
         {% for object in object_list %}
         <div class="col-3">
@@ -18,12 +20,14 @@
                     <a class="btn btn-lg btn-block btn-outline-primary"
                        href="{% url 'catalog:product_view' object.pk %}">{{ object.price_per_product }} руб</a>
                     <div class="btn-group">
-                        <a href="{% url 'catalog:product_view' object.pk %}"
-                           class="btn btn-sm btn-outline-secondary">Посмотреть</a>
-                        <a href="{% url 'catalog:update_product' object.pk %}"
-                           class="btn btn-sm btn-outline-secondary">Изменить</a>
-                        <a href="{% url 'catalog:delete_product' object.pk %}"
-                           class="btn btn-sm btn-outline-secondary">Удалить</a>
+                        {% if user.is_authenticated %}
+                            <a href="{% url 'catalog:product_view' object.pk %}"
+                               class="btn btn-sm btn-outline-secondary">Посмотреть</a>
+                            <a href="{% url 'catalog:update_product' object.pk %}"
+                               class="btn btn-sm btn-outline-secondary">Изменить</a>
+                            <a href="{% url 'catalog:delete_product' object.pk %}"
+                               class="btn btn-sm btn-outline-secondary">Удалить</a>
+                        {% endif %}
                     </div>
                 </div>
             </div>
