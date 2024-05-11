@@ -6,6 +6,8 @@ from catalog.models import Product, Version
 from django.views.generic import DetailView, ListView, TemplateView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.mixins import LoginRequiredMixin
 
+from catalog.services import get_products_from_cache
+
 
 #
 # def home(request):
@@ -44,6 +46,9 @@ class ContactsTemplateView(TemplateView):
 class ProductListView(ListView):
     model = Product
     template_name = "catalog/home.html"
+
+    def get_queryset(self):
+        return get_products_from_cache()
 
 
 class ProductDetailView(LoginRequiredMixin, DetailView):
